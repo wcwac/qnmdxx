@@ -1,0 +1,23 @@
+name: work
+
+on:
+  push:
+  schedule:
+    - cron: '15 0 * * *'
+
+jobs:
+  work:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 'Checkout codes'
+      uses: actions/checkout@v2
+    - name: 'Set python'
+      uses: actions/setup-python@v1
+      with:
+        python-version: '3.x'
+    - name: 'Work'
+      env:
+        cookies: ${{ secrets.cookies }}
+        url: ${{ secrets.url }}
+      run: |
+        python qnmdxx.py
