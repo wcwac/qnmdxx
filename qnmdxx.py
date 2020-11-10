@@ -8,6 +8,12 @@ url = os.environ["url"]
 
 option = webdriver.ChromeOptions()
 option.add_argument('user-agent="Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36 QBCore/4.0.1278.400 QQBrowser/9.0.2524.400 Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2875.116 Safari/537.36 NetType/WIFI MicroMessenger/7.0.5 WindowsWechat"')
+option.add_argument('--disable-infobars')
+option.add_argument("--disable-extensions")
+option.add_argument("--disable-gpu")
+option.add_argument("--disable-dev-shm-usage")
+option.add_argument("--no-sandbox")
+option.add_argument("--headless")
 driver = webdriver.Chrome(chrome_options=option)
 driver.set_window_size(640 , 960)
 driver.get(url + '/icon/icon.png')
