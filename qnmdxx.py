@@ -16,7 +16,6 @@ option.add_argument("--no-sandbox")
 option.add_argument("--headless")
 driver = webdriver.Chrome(chrome_options=option)
 driver.set_window_size(640 , 960)
-print(url + '/icon/icon.png')
 driver.get(url + '/icon/icon.png')
 driver.delete_all_cookies()
 
