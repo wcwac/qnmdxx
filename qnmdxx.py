@@ -3,7 +3,7 @@ from selenium.webdriver.common.keys import Keys
 import time
 import os
 
-cookies = os.environ["cookies"]
+cookies = eval(os.environ["cookies"])
 url = os.environ["url"]
 
 option = webdriver.ChromeOptions()
