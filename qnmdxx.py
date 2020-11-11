@@ -22,7 +22,7 @@ driver.delete_all_cookies()
 for i in cookies:
     driver.add_cookie({'name':i,'value':cookies[i],'path':'/'})
 
-delay=5
+delay=20
 
 def studyArticle(i):
     driver.get(url + '/study/studyList')
